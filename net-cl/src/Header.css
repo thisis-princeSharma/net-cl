@@ -6,7 +6,9 @@
     display: flex;
     justify-content: space-between;
     background: transparent;
-    height: 25px;
+    height: 5
+    
+    0px;
     z-index: 1;
     transition-timing-function: ease-in;
     transition: all 1s;

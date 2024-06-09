@@ -27,8 +27,8 @@ function Banner() {
             backgroundSize: "cover",
             backgroundImage: `url("https://image.tmdb.org/t/p/w500/${movie?.backdrop_path}")`,
             backgroundPosition: "center center",
-
-        }}>
+            
+            }}>
             <div className='banner_contents'>
                 <h1 className='banner_title'>{movie?.title || movie?.name || movie?.original_name}</h1>
                 <div className='banner_buttons'>

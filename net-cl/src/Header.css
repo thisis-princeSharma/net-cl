@@ -7,9 +7,12 @@
     justify-content: space-between;
     background: transparent;
     height: 25px;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition: all 1s;
 }
 .nav_black {
-    background-color: black;
+    background-color: #111;
 }
 .nav_logo {
     width: 80px;

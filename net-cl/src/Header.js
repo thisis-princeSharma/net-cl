@@ -1,23 +1,26 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
 
-
 function Header() {
   const [show, handleShow] = useState(false);
 
-  useEffect(()=> {
-    window.addEventListener("scroll", () => {
-      if(window.scrollY > 100){
-        handleShow(true)
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        handleShow(true);
+      } else {
+        handleShow(false);
       }
-      else handleShow(false);
-    });
+    };
+
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll")
-    }
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
   return (
-    <div className={`nav ${show &&"nav_black"}`}>
+    <div className={`nav ${show && "nav_black"}`}>
       <img
         className="nav_logo"
         src="https://ik.imagekit.io/Prince/Logonetflix.png?updatedAt=1717895518034"

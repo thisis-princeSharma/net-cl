@@ -17,11 +17,11 @@ function Row({ title, fetchUrl, isLargeRow }) {
   }, [fetchUrl]);
 
   const opts = {
-    height: '390', 
-    width: "100%", 
-    playersVars: {"https://developers.google.com/youtube/player_parameters"},
+    height: '390',
+    width: "100%",
+    // playersVars: {"https://developers.google.com/youtube/player_parameters"},
     autoplay: 1
-  }
+  };
 
   console.log(movies)
 
@@ -40,7 +40,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
           />
         ))}
       </div>
-      <Youtube videoId={trailerUrl} opts={opts} />
+      {/* <Youtube videoId={trailerUrl} opts={opts} /> */}
     </div>
   );
 }
